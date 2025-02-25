@@ -12,7 +12,7 @@ void sortDigitsDescending(char* str) {
     for (char* ptr = str; *ptr; ++ptr) {
         if (*ptr >= '0' && *ptr <= '9') {
             for (int i = 9; i >= 0; --i) {
-                while (count[i] > 0) {
+                if (count[i] > 0) {
                     *ptr = '0' + i;
                     count[i]--;
                     break;
